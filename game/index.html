@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lantern &amp; Lens — Spot the Difference</title>
+<link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+  <header id="topbar">
+    <div id="brand">
+      <h1 id="game-title">Lantern &amp; Lens</h1>
+      <p id="scene-name">Scene One · Dawn Harbour</p>
+    </div>
+    <div id="hud">
+      <div id="counter" class="hud-card"><span id="counter-num">7</span> <span id="counter-label">to find</span><span id="pips"></span></div>
+      <div id="timer" class="hud-card">05:00</div>
+      <div id="score" class="hud-card">Score <span id="score-num">0</span></div>
+    </div>
+  </header>
+
+  <p id="scene-subtitle">First light over the quay — seven things are not as they were.</p>
+
+  <main id="stage">
+    <figure class="panel-frame" id="frame-left">
+      <canvas id="panel-left" width="1120" height="800"></canvas>
+      <figcaption>The original</figcaption>
+    </figure>
+    <figure class="panel-frame" id="frame-right">
+      <canvas id="panel-right" width="1120" height="800"></canvas>
+      <figcaption>The copy — spot the changes</figcaption>
+    </figure>
+  </main>
+
+  <footer id="controls">
+    <button id="btn-hint" type="button">Hint (<span id="hint-count">3</span>)</button>
+    <button id="btn-loupe" type="button">Loupe</button>
+    <button id="btn-restart" type="button">Restart scene</button>
+    <button id="btn-mute" type="button">Sound: on</button>
+    <span id="scene-dots"></span>
+    <span id="howto">Click a difference in either picture · Arrow keys move the brass ring · Enter checks · H hint · Shift loupe</span>
+  </footer>
+
+  <div id="overlay" class="hidden">
+    <div id="overlay-card">
+      <h2 id="overlay-title">Lantern &amp; Lens</h2>
+      <div id="overlay-stars"></div>
+      <p id="overlay-text"></p>
+      <div id="overlay-buttons">
+        <button id="btn-primary" type="button">Play</button>
+        <button id="btn-secondary" type="button">Replay scene</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
